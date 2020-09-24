@@ -1,0 +1,131 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <title>DRUM MACHINE 2020 "Beat the bad out!"</title>
+
+        <script>
+        
+      function play(str) {
+
+      if (str === "q" || str === "Q")  {
+         document.getElementById('display').innerText = "Clap" ;      
+         } else if (str === "w" || str === "W"){
+         document.getElementById('display').innerText = "Kick 1";      
+         } else if (str === "e" || str === "E"){
+         document.getElementById('display').innerText = "Kick 2";
+         } else if (str === "a" || str === "A"){
+         document.getElementById('display').innerText = "Kick 3";     
+         } else if (str === "s" || str === "S"){
+         document.getElementById('display').innerText = "Shaker";     
+         } else if (str === "w" || str === "W"){
+         document.getElementById('display').innerText = "Snare";     
+         } else if (str === "w" || str === "W"){
+         document.getElementById('display').innerText = "Tom 1";      
+         } else if (str === "w" || str === "W"){
+         document.getElementById('display').innerText = "Tom 2";     
+         } else if (str === "w" || str === "W"){
+         document.getElementById('display').innerText = "Tom 3";
+        }
+       
+        var audio = document.getElementById(str);
+        audio.play();
+      }
+
+      window.document.onkeyup = function(event) {
+      let keystroke = event.key;
+      if (keystroke === "q" || keystroke === "Q")  {
+         play("Q") ;
+      } else if (keystroke === "w" || keystroke === "W"){
+         play("W");
+      } else if (keystroke === "e" || keystroke === "E"){
+         play("E");
+      } else if (keystroke === "a" || keystroke === "A"){
+         play("A");
+      } else if (keystroke === "s" || keystroke === "S"){
+         play("S");
+      } else if (keystroke === "d" || keystroke === "D"){
+         play("D");
+      } else if (keystroke === "z" || keystroke === "Z"){
+         play("Z");
+      } else if (keystroke === "x" || keystroke === "X"){
+         play("X");
+      } else if (keystroke === "c" || keystroke === "C"){
+         play("C");
+      }}
+   </script>
+
+<body>
+<div class="container" id="drum-machine">
+<h1 class="text-center"> PUMP THOSE FINGERS </h1>
+<div class="card my-3"> 
+<div class="card-body">
+<div id="display" class="text-center">Kick that bass! </div>
+<div class ="row"> 
+<div class ="column" style="background-color:#aaa;">
+
+<button class="drum-pad btn btn-block btn-primary col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-0" onCLick="play('Q')">
+Q
+<audio src="./clip/kick1.wav" class= "clip" id="Q">
+</button>
+<button class="drum-pad btn btn-block btn-info col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" ; top id="drum-1"  onCLick="play('W')">
+W
+<audio src="./clip/kick2.wav" class= "clip" id="W">
+</button>
+<button class="drum-pad btn btn-block btn-secondary col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-2"  onCLick="play('E')">
+E
+<audio src="./clip/kick3.wav" class= "clip" id="E">
+</button>
+</div>
+<div class ="column" style="background-color:#aaa;">
+<button class="drum-pad btn btn-block btn-primary col-sm-4" style="padding-top: 50px; padding-bottom: 30px;"  id="drum-3"  onCLick="play('A')">
+A
+<audio src="./clip/shaker.wav" class= "clip" id="A">
+</button>
+<button class="drum-pad btn btn-block btn-info col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-4"  onCLick="play('S')">
+S
+<audio src="./clip/snare.wav" class= "clip" id="S">
+</button>
+<button class="drum-pad btn btn-block btn-secondary col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-5"  onCLick="play('D')">
+D
+<audio src="./clip/tom1.wav" class= "clip" id="D">
+</button>
+</div>
+<div class ="column" style="background-color:#aaa;">
+<button class="drum-pad btn btn-block btn-primary col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-6"  onCLick="play('Z')">
+Z
+<audio src="./clip/tom2.wav" class= "clip" id="Z">
+</button>
+<button class="drum-pad btn btn-block btn-info col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-7"  onCLick="play('X')">
+X
+<audio src="./clip/tom3.wav" class= "clip" id="X">
+</button>
+<button class="drum-pad btn btn-block btn-secondary col-sm-4" style="padding-top: 50px; padding-bottom: 30px;" id="drum-8"  onCLick="play('C')">
+C
+<audio src="./clip/clap.wav" class= "clip"  id="C">
+</button></div>
+</div>
+</div>
+
+
+
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src ="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+  <script src ="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

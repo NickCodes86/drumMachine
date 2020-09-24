@@ -1,0 +1,29 @@
+div {
+    background: linen;
+    font: 18px Arial, sans-serif;
+    border: 1px solid #c3c3c3;
+}
+
+.column {
+  width: 33.33%;
+  padding:25px;
+}
+.div{
+border: 5px;
+}
+.row{
+
+  }
+  .btn {
+  font: bold 84% 'trebuchet ms',helvetica,sans-serif;
+  width: 40.33%;
+  padding:60px;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+
+
+body{
+    background: gainsboro;
+}
